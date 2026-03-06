@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-12 md:py-20 bg-ice-blue/20 min-h-screen">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <article class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+      <div class="p-8 md:p-12">
+        <h1 class="heading-font text-3xl md:text-4xl font-bold text-navy mb-3">{{ object.title }}</h1>
+        <div class="text-sm text-navy/50 mb-8 pb-4 border-b border-gray-100 flex items-center justify-between">
+          <span><i class="fas fa-check-circle text-whatsapp-green mr-2"></i>Success Story</span>
+          <span>Added On: {{ object.created|date:"M d, Y" }}</span>
+        </div>
+        <div class="prose prose-lg max-w-none text-navy/80 leading-relaxed">
+          {{ object.description|safe }}
+        </div>
+      </div>
+    </article>
+
+    <div class="mt-8 text-center flex flex-wrap justify-center gap-6">
+      <a href="{% url 'rehab:career-list' %}"
+        class="inline-block text-steel-blue font-bold hover:text-coral transition-all duration-300">
+        <i class="fas fa-arrow-left mr-2"></i>All Success Stories
+      </a>
+      <a href="https://wa.me/254799747772"
+        class="inline-block bg-whatsapp-green text-white font-bold px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300">
+        WhatsApp Prof Ali
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

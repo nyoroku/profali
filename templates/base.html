@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+{% load static %}
+{% load services_tag %}
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prof Ali The Witchdoctor - Traditional African Herbalist & Spiritual Healer</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Prof Ali The Witchdoctor - Expert Traditional African Herbalist & Spiritual Healer with 20+ years experience. Specialized in spiritual cleansing, love, prosperity, and natural herbal healing.">
+  <meta name="keywords"
+    content="Witchdoctor, Traditional Healer, African Herbalist, Spiritual Healing, Prof Ali, Love Spells, Prosperity, Spiritual Cleansing, Kenya Healer">
+  <meta name="author" content="Prof Ali The Witchdoctor">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+  <meta property="og:title" content="Prof Ali The Witchdoctor - Traditional African Herbalist">
+  <meta property="og:description"
+    content="Unlock ancient traditional wisdom and spiritual healing. Over 20 years of experience in ancestral practice.">
+  <meta property="og:image"
+    content="https://news.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/cosmos_197393_055_72dpi.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ request.build_absolute_uri }}">
+  <meta property="twitter:title" content="Prof Ali The Witchdoctor - Traditional African Herbalist">
+  <meta property="twitter:description"
+    content="Unlock ancient traditional wisdom and spiritual healing. Over 20 years of experience in ancestral practice.">
+  <meta property="twitter:image"
+    content="https://news.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/cosmos_197393_055_72dpi.jpg">
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Prof Ali The Witchdoctor",
+    "image": "https://news.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/cosmos_197393_055_72dpi.jpg",
+    "@id": "{{ request.build_absolute_uri }}",
+    "url": "{{ request.build_absolute_uri }}",
+    "telephone": "+254799747772",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nairobi",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -1.2921,
+      "longitude": 36.8219
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [
+      "https://wa.me/254799747772"
+    ]
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'steel-blue': '#4A7B9D',
+            'light-blue': '#A8C8DD',
+            'ice-blue': '#D9EEF3',
+            'coral': '#E8704A',
+            'navy': '#2C3E50',
+            'dark-navy': '#1A252F',
+            'whatsapp-green': '#25D366',
+          },
+          fontFamily: {
+            'heading': ['"Playfair Display"', 'serif'],
+            'body': ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #2C3E50;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .heading-font {
+      font-family: 'Playfair Display', serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate-slide-left {
+      animation: slideInLeft 0.8s ease-out forwards;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #4A7B9D !important;
+      background-color: white;
+      width: 44px !important;
+      height: 44px !important;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 1rem !important;
+    }
+
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      background: #4A7B9D !important;
+    }
+
+    #mobile-menu {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    #mobile-menu.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-white min-h-screen">
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="{% url 'rehab:index' %}"
+          class="heading-font text-xl md:text-2xl font-bold text-navy hover:text-steel-blue transition-colors duration-300">
+          Prof Ali <span class="text-coral">The Witchdoctor</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="{% url 'rehab:about' %}"
+            class="text-navy font-medium hover:text-steel-blue transition-colors duration-300">About Prof Ali</a>
+          <a href="{% url 'rehab:career-list' %}"
+            class="text-navy font-medium hover:text-steel-blue transition-colors duration-300">Testimonials</a>
+          <a href="{% url 'rehab:blog-list' %}"
+            class="text-navy font-medium hover:text-steel-blue transition-colors duration-300">Insights</a>
+          <a href="{% url 'rehab:message_create' %}"
+            class="inline-block bg-coral text-white font-semibold px-6 py-2.5 rounded-full hover:bg-steel-blue hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300">
+            Get Help
+          </a>
+        </div>
+        <button id="burger-btn"
+          class="md:hidden w-11 h-11 rounded-full bg-steel-blue text-white flex flex-col items-center justify-center gap-1.5 cursor-pointer hover:bg-navy transition-colors duration-300">
+          <span class="burger-line block w-5 h-0.5 bg-white transition-all duration-300"></span>
+          <span class="burger-line block w-5 h-0.5 bg-white transition-all duration-300"></span>
+          <span class="burger-line block w-5 h-0.5 bg-white transition-all duration-300"></span>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden">
+        <div class="py-3 space-y-1">
+          <a href="{% url 'rehab:about' %}"
+            class="block px-4 py-3 text-navy font-medium hover:bg-ice-blue hover:text-steel-blue rounded-lg transition-all duration-200">About
+            Prof Ali</a>
+          <a href="{% url 'rehab:career-list' %}"
+            class="block px-4 py-3 text-navy font-medium hover:bg-ice-blue hover:text-steel-blue rounded-lg transition-all duration-200">Testimonials</a>
+          <a href="{% url 'rehab:blog-list' %}"
+            class="block px-4 py-3 text-navy font-medium hover:bg-ice-blue hover:text-steel-blue rounded-lg transition-all duration-200">Insights</a>
+          <a href="{% url 'rehab:message_create' %}"
+            class="block mx-4 mt-2 text-center bg-coral text-white font-semibold px-6 py-2.5 rounded-full hover:bg-steel-blue transition-all duration-300">Get
+            Help</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  {% if messages %}
+  {% for message in messages %}
+  {% if 'success' in message.tags %}
+  <div class="max-w-7xl mx-auto px-4 mt-4">
+    <div class="bg-ice-blue border-l-4 border-steel-blue text-navy px-6 py-4 rounded-r-lg relative" role="alert">
+      <button class="absolute top-3 right-3 text-steel-blue hover:text-navy transition-colors"
+        onclick="this.parentElement.remove()">
+        <i class="fas fa-times"></i>
+      </button>
+      {{ message|safe }}
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+
+  {% block content %}
+  {% endblock %}
+
+  <footer class="bg-gradient-to-br from-navy to-dark-navy text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <h5
+            class="heading-font text-xl font-bold mb-4 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-coral">
+            About Prof Ali</h5>
+          <p class="text-gray-300 leading-relaxed mb-6">
+            With over 20 years of experience in traditional healing, Prof Ali The Witchdoctor combines ancestral wisdom
+            with natural herbal medicine to provide profound spiritual and physical wellness solutions.
+          </p>
+          <div class="flex gap-3">
+            <a href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-coral hover:-translate-y-1 transition-all duration-300"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/254799747772"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-whatsapp-green hover:-translate-y-1 transition-all duration-300"><i
+                class="fab fa-whatsapp"></i></a>
+            <a href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-coral hover:-translate-y-1 transition-all duration-300"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h5
+            class="heading-font text-xl font-bold mb-4 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-coral">
+            Our Services</h5>
+          {% get_service %}
+          <ul class="space-y-3">
+            {% for service in services|slice:":5" %}
+            <li><a href="{% url 'rehab:service-detail' service.id %}"
+                class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 block">→ {{
+                service.name}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="heading-font text-xl font-bold mb-4 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-coral">
+            Important Links</h5>
+          <ul class="space-y-3">
+            <li><a href="{% url 'rehab:about' %}"
+                class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 block">→ Expert Profile</a>
+            </li>
+            <li><a href="{% url 'rehab:career-list' %}"
+                class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 block">→ Success
+                Stories</a></li>
+            <li><a href="{% url 'rehab:blog-list' %}"
+                class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 block">→ Spiritual
+                Insights</a></li>
+            <li><a href="{% url 'rehab:message_create' %}"
+                class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 block">→ Consultation</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="heading-font text-xl font-bold mb-4 pb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-coral">
+            Contact Prof Ali</h5>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-envelope text-coral"></i>
+              <a href="mailto:info@profali.com"
+                class="text-gray-300 hover:text-white transition-colors">info@profali.com</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-phone-alt text-coral"></i>
+              <a href="tel:0799747772" class="text-gray-300 hover:text-white transition-colors">0799 747 772</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fab fa-whatsapp text-whatsapp-green"></i>
+              <a href="https://wa.me/254799747772" class="text-gray-300 hover:text-white transition-colors">Chat on
+                WhatsApp</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fas fa-map-marker-alt text-coral"></i>
+              <span class="text-gray-300">Kenya</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/20 pt-6 text-center text-sm text-gray-400">
+        <p>&copy; {% now "Y" %} Prof Ali Traditional Healing & Spiritual Guidance. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.getElementById('burger-btn');
+      const menu = document.getElementById('mobile-menu');
+      burger.addEventListener('click', () => menu.classList.toggle('open'));
+      menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => menu.classList.remove('open')));
+      document.addEventListener('click', (event) => { if (!burger.contains(event.target) && !menu.contains(event.target)) menu.classList.remove('open'); });
+    });
+  </script>
+  {% block extra_js %}{% endblock %}
+</body>
+
+</html>

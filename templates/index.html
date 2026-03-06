@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-ice-blue via-white to-light-blue overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div class="animate-slide-left">
+        <h1 class="heading-font text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-4">
+          Prof Ali <br class="hidden sm:block">The <span class="text-coral">Witchdoctor</span>
+        </h1>
+        <p class="text-lg text-navy/80 mb-8 leading-relaxed max-w-lg font-medium">
+          Unlock Ancient Traditional Wisdom & Spiritual Healing. With over 20 years of ancestral practice, I help solve
+          life's greatest challenges through sacred herbal medicine and divine guidance.
+        </p>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-4 mb-8">
+          <div
+            class="bg-white/60 backdrop-blur-sm rounded-xl p-4 text-center shadow-sm hover:-translate-y-1 transition-all duration-300">
+            <p class="heading-font text-3xl font-bold text-steel-blue">20+</p>
+            <p class="text-xs text-navy/70 mt-1 font-bold">Years Experience</p>
+          </div>
+          <div
+            class="bg-white/60 backdrop-blur-sm rounded-xl p-4 text-center shadow-sm hover:-translate-y-1 transition-all duration-300">
+            <p class="heading-font text-3xl font-bold text-steel-blue">100%</p>
+            <p class="text-xs text-navy/70 mt-1 font-bold">Privacy Guaranteed</p>
+          </div>
+          <div
+            class="bg-white/60 backdrop-blur-sm rounded-xl p-4 text-center shadow-sm hover:-translate-y-1 transition-all duration-300">
+            <p class="heading-font text-3xl font-bold text-steel-blue">5k+</p>
+            <p class="text-xs text-navy/70 mt-1 font-bold">Success Stories</p>
+          </div>
+        </div>
+
+        <!-- Corrected Hero Buttons -->
+        <div class="flex flex-wrap gap-4">
+          <a href="https://wa.me/254799747772"
+            class="inline-flex items-center gap-2 bg-whatsapp-green text-white font-bold px-8 py-4 rounded-full shadow-lg hover:bg-opacity-90 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+            <i class="fab fa-whatsapp text-xl"></i> Chat on WhatsApp
+          </a>
+          <a href="tel:0799747772"
+            class="inline-flex items-center gap-2 bg-navy text-white font-bold px-8 py-4 rounded-full shadow-lg hover:bg-steel-blue transform hover:-translate-y-1 transition-all duration-300">
+            <i class="fas fa-phone-alt"></i> Call: 0799 747 772
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="flex justify-center animate-fade-in-up">
+        <div class="relative w-full max-w-md group">
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-steel-blue/20 to-coral/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500">
+          </div>
+          <img
+            src="https://news.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/cosmos_197393_055_72dpi.jpg"
+            alt="Prof Ali Spiritual Healer"
+            class="relative z-10 w-full h-auto rounded-2xl shadow-2xl border-4 border-white object-cover group-hover:scale-[1.02] transition-transform duration-500">
+          <!-- Floating badge -->
+          <div
+            class="absolute -bottom-4 -left-4 z-20 bg-coral text-white px-4 py-2 rounded-lg font-bold shadow-lg transform -rotate-3">
+            Sacred Herbalist
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-16 text-white fill-current">
+      <path
+        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+        opacity=".25"></path>
+      <path
+        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+        opacity=".5"></path>
+      <path
+        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z">
+      </path>
+    </svg>
+  </div>
+</section>
+
+<!-- Content Sections remain logically similar but styled as herbalist -->
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="heading-font text-3xl md:text-4xl font-bold text-navy mb-4 relative inline-block">
+        Sacred Healing Services
+        <span class="block w-20 h-1 bg-coral mx-auto mt-3 rounded-full"></span>
+      </h2>
+      <p class="text-navy/70 max-w-2xl mx-auto mt-4 text-lg">
+        Natural remedies and ancestral guidance to restore your spirit and heal your body.
+      </p>
+    </div>
+
+    {% load services_tag %}
+    {% get_service %}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for service in services %}
+      <div
+        class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+        <div class="overflow-hidden h-52 relative">
+          <img src="{{ service.image.url }}" alt="{{ service.name }}"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-all duration-300"></div>
+        </div>
+        <div class="p-6">
+          <h3 class="heading-font text-xl font-bold text-navy mb-3">{{ service.name }}</h3>
+          <p class="text-navy/70 mb-5 leading-relaxed">{{ service.summary|truncatewords:25|safe }}</p>
+          <a href="{% url 'rehab:service-detail' service.id %}"
+            class="inline-block w-full text-center bg-coral text-white font-bold py-3 rounded-full hover:bg-steel-blue transition-colors duration-300">
+            Learn More
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Success Stories (Testimonials) -->
+<section class="py-16 md:py-24 bg-ice-blue/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="heading-font text-3xl md:text-4xl font-bold text-navy mb-4 relative inline-block">
+        Restored Lives & Success Stories
+        <span class="block w-20 h-1 bg-coral mx-auto mt-3 rounded-full"></span>
+      </h2>
+    </div>
+
+    {% load testimonies_tag %}
+    {% get_testimony %}
+    <div class="swiper testimonialSwiper">
+      <div class="swiper-wrapper">
+        {% for testimony in testimonies %}
+        <div class="swiper-slide pb-12">
+          <div class="max-w-2xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-10 relative text-center">
+              <span class="text-6xl text-coral/20 leading-none absolute top-4 left-4 font-serif">"</span>
+              <p class="italic text-navy/80 text-xl leading-relaxed mb-8 relative z-10">
+                "{{ testimony.description }}"
+              </p>
+              <div class="inline-flex items-center gap-4">
+                <img src="{{ testimony.photo.url }}" alt="{{ testimony.name }}"
+                  class="w-16 h-16 rounded-full object-cover border-4 border-ice-blue shadow-md">
+                <div class="text-left">
+                  <p class="heading-font font-bold text-navy text-lg">{{ testimony.name }}</p>
+                  <p class="text-xs text-coral font-bold tracking-widest uppercase">Verified Testimony</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Spiritual Insights (Blog) -->
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="heading-font text-3xl md:text-4xl font-bold text-navy mb-4 relative inline-block">
+        Divine Wisdom & Herbal Insights
+        <span class="block w-20 h-1 bg-coral mx-auto mt-3 rounded-full"></span>
+      </h2>
+      <p class="text-navy/70 max-w-2xl mx-auto mt-4 text-lg">
+        Ancient secrets and natural guides to spiritual enlightenment and physical health.
+      </p>
+    </div>
+
+    {% load blogs_tag %}
+    {% get_blog %}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for blog in blogs %}
+      <a href="{% url 'rehab:blog-detail' blog.id %}" class="group block">
+        <div
+          class="bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 border border-gray-100">
+          {% if blog.picture %}
+          <div class="overflow-hidden h-52">
+            <img src="{{ blog.picture.url }}" alt="{{ blog.title }}"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          </div>
+          {% endif %}
+          <div class="p-6">
+            <h3
+              class="heading-font text-xl font-bold text-navy group-hover:text-coral transition-colors duration-300 mb-3">
+              {{ blog.title }}</h3>
+            <div class="text-navy/60 text-sm mb-4 line-clamp-3">{{ blog.summary|truncatewords:20|safe }}</div>
+            <span
+              class="inline-flex items-center text-steel-blue font-bold group-hover:gap-2 transition-all duration-300">
+              Read Insight <i class="fas fa-arrow-right ml-2 text-xs"></i>
+            </span>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  var swiper = new Swiper(".testimonialSwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 5000,
+    },
+  });
+</script>
+{% endblock %}

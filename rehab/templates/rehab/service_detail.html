@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Service",
+  "serviceType": "Traditional Healing",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Prof Ali The Witchdoctor"
+  },
+  "name": "{{ object.name }}",
+  "description": "{{ object.summary|striptags }}",
+  "image": "{{ request.scheme }}://{{ request.get_host }}{{ object.image.url }}"
+}
+</script>
+<section class="py-12 md:py-20 bg-ice-blue/20 min-h-screen">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <article class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+      <div class="p-8 md:p-12">
+        <h1 class="heading-font text-3xl md:text-5xl font-bold text-navy mb-8 border-b border-ice-blue pb-4">{{
+          object.name }}</h1>
+        <div class="prose prose-lg max-w-none text-navy/80 leading-relaxed font-body">
+          {{ object.body|safe }}
+        </div>
+      </div>
+
+      <!-- Specialized CTA for services -->
+      <div class="bg-navy/5 p-8 border-t border-gray-100 text-center">
+        <p class="heading-font text-xl font-bold text-navy mb-4">Ready to seek this healing?</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="https://wa.me/254799747772"
+            class="bg-whatsapp-green text-white font-bold px-8 py-3 rounded-full hover:shadow-lg transition-all">
+            Contact on WhatsApp
+          </a>
+          <a href="{% url 'rehab:message_create' %}"
+            class="bg-coral text-white font-bold px-8 py-3 rounded-full hover:bg-steel-blue transition-all">
+            Book a Consultation
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <div class="mt-8 text-center">
+      <a href="{% url 'rehab:index' %}"
+        class="inline-flex items-center text-steel-blue font-bold hover:text-coral transition-all duration-300">
+        <i class="fas fa-arrow-left mr-2 text-xs"></i>Back to All Services
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

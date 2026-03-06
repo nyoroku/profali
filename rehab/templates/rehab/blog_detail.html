@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ object.title }}",
+  "description": "{{ object.summary|striptags }}",
+  "image": [
+    "{{ request.scheme }}://{{ request.get_host }}{{ object.picture.url }}"
+  ],
+  "datePublished": "{{ object.created|date:'c' }}",
+  "dateModified": "{{ object.created|date:'c' }}",
+  "author": [{
+      "@type": "Person",
+      "name": "Prof Ali The Witchdoctor",
+      "url": "{{ request.scheme }}://{{ request.get_host }}{% url 'rehab:about' %}"
+    }]
+}
+</script>
+<section class="py-12 md:py-20 bg-ice-blue/20 min-h-screen">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div class="p-8 md:p-12">
+        <h1 class="heading-font text-3xl md:text-4xl font-bold text-navy mb-3">{{ object.title }}</h1>
+        <div class="text-sm text-navy/50 mb-8 pb-4 border-b border-gray-100">
+          <i class="far fa-calendar-alt mr-2"></i>{{ object.created }}
+        </div>
+        <div class="prose prose-lg max-w-none text-navy/80 leading-relaxed">
+          {{ object.body|safe }}
+        </div>
+      </div>
+    </article>
+
+    <div class="mt-8 text-center">
+      <a href="{% url 'rehab:blog-list' %}"
+        class="inline-block text-steel-blue font-medium hover:text-coral transition-colors duration-300">
+        <i class="fas fa-arrow-left mr-2"></i>Back to Blog
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

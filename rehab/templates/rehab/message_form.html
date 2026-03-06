@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<section class="py-12 md:py-20 bg-ice-blue/20 min-h-screen">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h1 class="heading-font text-3xl md:text-4xl font-bold text-navy mb-4 relative inline-block">
+        Book a Consultation
+        <span class="block w-16 h-1 bg-coral mx-auto mt-3 rounded-full"></span>
+      </h1>
+      <p class="text-navy/70 mt-4">Speak with Prof Ali today about your spiritual and physical healing journey.</p>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-xl p-8 md:p-10 border border-ice-blue/50">
+      <form method="post">
+        {% csrf_token %}
+        <div class="space-y-4">
+          {{ form|crispy }}
+        </div>
+        <div class="mt-8">
+          <button type="submit"
+            class="w-full bg-coral text-white font-bold py-4 px-8 rounded-full hover:bg-steel-blue hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+            <i class="fas fa-paper-plane"></i> Send Request
+          </button>
+        </div>
+      </form>
+
+      <div class="mt-8 pt-8 border-t border-gray-100 text-center">
+        <p class="text-sm text-navy/50 font-medium mb-4 uppercase tracking-widest">Or Reach Out Directly</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="https://wa.me/254799747772"
+            class="bg-whatsapp-green text-white font-bold px-6 py-2 rounded-full text-sm">WhatsApp</a>
+          <a href="tel:0799747772" class="bg-navy text-white font-bold px-6 py-2 rounded-full text-sm">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
